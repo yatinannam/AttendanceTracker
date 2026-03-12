@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@import "tailwindcss";
+
+:root {
+  /* Premium Slate Background */
+  --background: #F1F5F9;
+  --foreground: #020617;
+
+  /* Elevated Surfaces */
+  --card: #FFFFFF;
+  --card-border: rgba(15, 23, 42, 0.08);
+
+  /* Primary Midnight Navy */
+  --accent: #0F172A;
+  --accent-foreground: #FFFFFF;
+
+  /* Radiant Luxury Gold */
+  --accent-gold: #D97706;
+  --gold-glow: rgba(217, 119, 6, 0.15);
+
+  --muted: #F8FAFC;
+  --muted-foreground: #475569;
+
+  /* Custom Gradients */
+  --gold-gradient: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  --navy-gradient: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-border: var(--card-border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-gold: var(--accent-gold);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --shadow-premium: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  --shadow-gold-heavy: 0 20px 25px -5px rgba(217, 119, 6, 0.1), 0 8px 10px -6px rgba(217, 119, 6, 0.1);
+}
+
+@layer base {
+  body {
+    background-color: var(--background);
+    background-image:
+      radial-gradient(at 0% 0%, rgba(15, 23, 42, 0.03) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(217, 119, 6, 0.03) 0px, transparent 50%);
+    background-attachment: fixed;
+    color: var(--foreground);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/80 backdrop-blur-md border border-card-border rounded-2xl shadow-premium transition-all duration-300;
+  }
+
+  .glass-panel:hover {
+    @apply shadow-lg transform -translate-y-0.5 border-accent/10;
+  }
+
+  .gold-gradient-bg {
+    background: var(--gold-gradient);
+  }
+
+  .navy-gradient-bg {
+    background: var(--navy-gradient);
+  }
+
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gold-gradient);
+  }
+
+  .premium-card {
+    @apply bg-white border border-slate-200/60 rounded-3xl shadow-sm hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-500 overflow-hidden;
+  }
+
+  .bento-grid {
+    @apply grid gap-6;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  }
+}
