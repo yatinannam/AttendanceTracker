@@ -1,0 +1,12 @@
+[00:00:01.790] Server  WARN    ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:02.110] Server  LOG     ✓ Ready in 1518ms
+[00:00:11.303] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:20.974] Server  ERROR   TypeError: fetch failed
+[00:00:20.977] Server  ERROR   Login Error: "fetch failed"
+[00:01:30.483] Server  ERROR   TypeError: fetch failed
+[00:01:30.484] Server  ERROR   Login Error: "fetch failed"
+[00:03:06.352] Server  LOG       Reload env: .env.local
+[00:03:06.571] Server  LOG     ✓ Compiled in 3ms
+[00:04:35.983] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:48.642] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:55.607] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
